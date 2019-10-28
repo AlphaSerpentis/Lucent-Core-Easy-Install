@@ -12,6 +12,8 @@
 
 clear
 cd
+echo "Easy Install (for Lucent) Copyright (c) 2019 AlphaSerpentis"
+echo "Lucent Core is developed by The Lucent Core Developers and The Bitcoin Core Developers"
 echo "Thank you for installing Lucent Core! Your installation will begin shortly"
 sleep 5
 
