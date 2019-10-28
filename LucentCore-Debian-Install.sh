@@ -1,5 +1,8 @@
 #!/bin/bash
-# Lucent Core Installation Script for Debian - LCNT v0.12.3.3 (October 2, 2019 Revision #2)
+# Easy Install (for Lucent) Copyright (c) 2019 AlphaSerpentis
+# Lucent Core is developed by The Lucent Core Developers and The Bitcoin Core Developers
+#
+# Lucent Core Installation Script for Debian - LCNT v0.12.3.3 (October 28, 2019)
 # Approved by John Razmus
 # Written by AlphaSerpentis#3203 (Lucent Core Tech Lead)
 # Lucent Core (for Debian) Installation Script is based upon C1ph3r117#6078 and Daywalker#3486 Lucent Masternode Script (https://github.com/LucentCoin/Lucent/releases)
@@ -9,6 +12,8 @@
 
 clear
 cd
+echo "Easy Install (for Lucent) Copyright (c) 2019 AlphaSerpentis"
+echo "Lucent Core is developed by The Lucent Core Developers and The Bitcoin Core Developers"
 echo "Thank you for installing Lucent Core! Your installation will begin shortly"
 sleep 5
 
