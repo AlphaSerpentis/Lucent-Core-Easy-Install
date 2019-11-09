@@ -5,6 +5,7 @@
 # Lucent Core Installation Script for Debian - LCNT v0.12.3.3 (October 28, 2019)
 # Approved by John Razmus
 # Written by AlphaSerpentis#3203 (Lucent Core Tech Lead)
+# Sentinel by @CryptoandCoffee (GlobalToken Core Team)
 # Lucent Core (for Debian) Installation Script is based upon C1ph3r117#6078 and Daywalker#3486 Lucent Masternode Script (https://github.com/LucentCoin/Lucent/releases)
 # NOTICE: This script is EXPERIMENTAL!
 
@@ -107,6 +108,12 @@ if [[ ${OPTMN^} == "Y" ]]; then
   sleep 6 # Give it time to shutdown properly...
   lucentd --daemon
   sleep 6 # Give it time to load...
+
+  #Setup Sentinel by @CryptoandCoffee
+  apt-get update ; apt-get -y install python-virtualenv virtualenv ; git clone https://github.com/C1ph3r117/Lucent-Sentinel sentinel ; cd sentinel
+  virtualenv ./venv ; ./venv/bin/pip install -r requirements.txt
+  (echo "* * * * * cd /home/pi/.lucentcore/sentinel && SENTINEL_DEBUG=1 ./venv/bin/python bin/sentinel.py >> sentinel.log 2>&1") | crontab
+  /etc/init.d/cron restart
 
 fi
 
