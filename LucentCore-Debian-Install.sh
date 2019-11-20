@@ -36,7 +36,8 @@ sudo apt-get git install build-essential libtool autotools-dev automake pkg-conf
 
 # Lucent Core Download & Installation (Part 1 - Before make)
 echo "Downloading Lucent Core..."
-git clone https://github.com/AlphaSerpentis/Lucent.git && git checkout patch-difficulty
+git clone https://github.com/AlphaSerpentis/Lucent.git
+git checkout patch-difficulty
 cd Lucent
 
 echo "Autogenerating..."
