@@ -32,10 +32,10 @@ echo "Installing the unzip package..."
 sudo apt install unzip
 
 echo "Installing build requirements..."
-sudo apt-get install git build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils wget libdb4.8 libdb++-dev libboost-all-dev curl
-
+sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils wget libdb4.8 libdb++-dev libboost-all-dev curl
+sudo apt-get install git
 # Lucent Core Download & Installation (Part 1 - Before make)
-clear
+
 echo "Downloading Lucent Core..."
 git clone https://github.com/AlphaSerpentis/Lucent.git
 git checkout patch-difficulty
