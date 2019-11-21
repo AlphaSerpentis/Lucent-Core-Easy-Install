@@ -38,8 +38,8 @@ sudo apt-get install git
 
 echo "Downloading Lucent Core..."
 git clone https://github.com/AlphaSerpentis/Lucent.git
-git checkout patch-difficulty
 cd Lucent
+git checkout patch-difficulty
 
 echo "Autogenerating..."
 ./autogen.sh
