@@ -2,7 +2,7 @@
 # Easy Install (for Lucent) Copyright (c) 2019 AlphaSerpentis
 # Lucent Core is developed by The Lucent Core Developers and The Bitcoin Core Developers
 #
-# Lucent Core Installation Script for Debian - LCNT v0.12.3.3 (October 28, 2019)
+# Lucent Core Installation Script for Debian - LCNT v0.12.3.3 (November 20, 2019)
 # Approved by John Razmus
 # Written by AlphaSerpentis#3203 (Lucent Core Tech Lead)
 # Sentinel by @CryptoandCoffee (GlobalToken Core Team)
@@ -50,13 +50,13 @@ if [[ ${OPTGUI^} == "Y" ]]; then
   echo "Downloading GUI dependencies..."
   sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
   echo "Configuring with GUI!"
-  ./configure --with-incompatible-bdb
+  ./configure --with-incompatible-bdb --without-tests
 elif [[ ${OPTGUI^} == "N" ]]; then
   echo "Configuring WITHOUT GUI!"
-  ./configure --without-gui --with-incompatible-bdb
+  ./configure --without-gui --with-incompatible-bdb --without-tests
 else
   echo "DEFAULTING TO NO GUI!"
-  ./configure --without-gui --with-incompatible-bdb
+  ./configure --without-gui --with-incompatible-bdb --without-tests
 fi
 
 echo "NOTICE: The make process MIGHT take a while! Do NOT close the terminal while it is making!"
