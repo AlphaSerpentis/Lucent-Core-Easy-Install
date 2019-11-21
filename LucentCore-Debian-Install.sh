@@ -38,7 +38,7 @@ sudo apt-get install git
 
 echo "Downloading Lucent Core..."
 git clone https://github.com/AlphaSerpentis/Lucent.git
-exit
+sleep 2
 cd Lucent
 git checkout patch-difficulty
 
